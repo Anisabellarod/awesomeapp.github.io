@@ -1,0 +1,391 @@
+:root {
+  --color-general: #66615b;
+  --color-titles: #111111;
+  --color-blue-bg: #f5fafd;
+  --color-orange-icon: #f5593d;
+  --color-gray-icon: #888;
+	--icon-orange: #f5593d;
+  --color-footer-bg: #252422;
+  --color-footer-text: #fff;
+  --font-title: 'Dosis', sans-serif;
+  --font-content: 'Roboto', sans-serif;
+	 --gradient: linear-gradient(90deg, #ff8a00 0%, #e52e71 100%);
+
+}
+
+.dosis-<uniquifier> {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--font-content);
+  margin: 0;
+  color: var(--color-general);
+}
+
+h2, h3 {
+  font-family: var(--font-title);
+  color: var(--color-titles);
+}
+
+header {
+  background-color: transparent;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-brand img {
+  height: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 10px;
+  font-family: var(--font-content);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fdd;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+
+
+.navbar-nav .nav-item:last-child .nav-link {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-item:last-child .nav-link:hover {
+  background-color: #fff;
+  color: #f5593d;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-titles);
+  font-weight: bold;
+}
+
+.btn-border {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.hero {
+  background: var(--gradient);
+  padding: 120px 0 60px;
+  color: white;
+	
+
+}
+
+.btn {
+	border-radius: 50px;
+	margin: 20px;
+	}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content ul {
+  list-style: disc;
+  margin-left: 20px;
+	color: white
+}
+
+.btn-main {
+  display: inline-block;
+  background: white;
+  color: #f5593d;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#features i.text-secondary,
+
+#features .owl-theme .owl-nav i {
+
+  color: var(--icon-orange) !important;
+
+}
+.g-4 > [class*="col-"] {
+  padding-bottom: 1.5rem;
+}
+
+
+/* Sección completa con márgenes para separar de otras secciones */
+.carousel-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Estilo del encabezado de la sección */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.section-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+  position: relative;
+}
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ocultar los inputs radio */
+input[name="slider"] {
+  display: none;
+}
+
+/* Contenedor de slides en fila */
+.slides {
+  display: flex;
+  width: 300%; /* 3 slides: 100% x 3 */
+  transition: transform 0.5s ease;
+}
+
+/* Cada slide ocupa 1/3 del ancho del contenedor */
+.slide {
+  width: calc(100% / 3);
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+/* Posicionamiento del carrusel según el slide seleccionado */
+#slide1:checked ~ .carousel .slides {
+  transform: translateX(0);
+}
+#slide2:checked ~ .carousel .slides {
+  transform: translateX(-33.3333%);
+}
+#slide3:checked ~ .carousel .slides {
+  transform: translateX(-66.6666%);
+}
+
+/* Navegación: puntos ubicados en la parte inferior del carrusel */
+.carousel-navigation {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.nav-dot {
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-dot:hover {
+  background: #999;
+}
+
+
+
+/* Contenedor de navegación (puntos) */
+.navigation {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilos para cada punto de navegación */
+.nav-dot {
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-dot:hover {
+  background: #999;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.btn-download {
+  background: #f5f5f5;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--color-gray-icon);
+  width: 150px;
+  font-weight: bold;
+}
+
+.btn-download i {
+  font-size: 2em;
+}
+
+ .download-section {
+      text-align: center;
+      padding: 70px;
+	   background: var(--gradient);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .download-section h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: var(--color-footer-text);
+    }
+   /* Contenedor principal de la sección de descarga */
+
+
+/* Contenedor de los botones de descarga */
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botón de descarga con layout flex para alinear ícono y textos horizontalmente */
+.download-button {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Botón alargado horizontalmente */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el ícono y el bloque de texto */
+  transition: transform 0.3s;
+}
+
+.download-button:hover {
+  transform: translateY(-5px);
+}
+
+/* Íconos en gris */
+.download-button img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+}
+
+/* Contenedor de la información */
+.download-info {
+  text-align: left;
+}
+
+/* Texto principal en el botón */
+.download-info p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Texto secundario en el botón */
+.download-info span {
+  font-size: 14px;
+  color: #555;
+}
+
+footer {
+  background-color:#252422;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
